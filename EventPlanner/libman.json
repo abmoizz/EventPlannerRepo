@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "jtable@2.6.0",
+      "destination": "wwwroot/jtable/"
+    },
+    {
+      "library": "jquery-ui@1.13.2",
+      "destination": "wwwroot/jquery-ui/"
+    }
+  ]
+}
