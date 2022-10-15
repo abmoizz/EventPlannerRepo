@@ -19,7 +19,7 @@ namespace EventPlanner.Controllers
         //Read,Create,Update,Delete
 
         [HttpPost]
-        public JsonResult EventList()
+        public JsonResult GetAllEvents()
         {
             try
             {

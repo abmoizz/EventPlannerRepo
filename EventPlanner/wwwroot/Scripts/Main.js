@@ -3,7 +3,7 @@
     $('#EventTable').jtable({
         title: 'The Events List',
         actions: {
-            listAction: '/Home/EventList',
+            listAction: '/Home/GetAllEvents',
             createAction: '/Home/AddEvent',
             updateAction: '/Home/UpdateEvent',
             deleteAction: '/Home/DeleteEvent'
