@@ -6,8 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<EventDBContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=EventDB;Trusted_Connection=True;"));
-builder.Services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1).AddNewtonsoftJson(Options => Options.SerializerSettings.ContractResolver = new DefaultContractResolver()) ;
+builder.Services.AddDbContext<EventDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("EventDbConn")));
+
+
+builder.Services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1)
+    .AddNewtonsoftJson(Options => Options.SerializerSettings.ContractResolver = new DefaultContractResolver()) ;
+
 
 var app = builder.Build();
 
